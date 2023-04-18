@@ -1,7 +1,7 @@
 # Toxicity-Detector
 A hugging face app made analyze toxicity in tweets. This is based on a previous project I took part in called 'Sentinela' at data-icmc.
 
-Link: https://huggingface.co/spaces/danielcd99/Toxicity-detection
+Link: https://huggingface.co/spaces/danielcd99/Toxicity-detector
 
 ## Interface:
 
