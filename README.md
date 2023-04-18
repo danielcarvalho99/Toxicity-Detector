@@ -1,0 +1,1 @@
+A hugging face app made analyze toxicity in tweets. This is based on a previous project I took part in called 'Sentinela' at data-icmc.
