@@ -19,7 +19,7 @@ pipe = load_pipeline()
 
 
 # Title and subtitle
-st.title("Toxicity Detection")
+st.title("Toxicity Detector")
 st.subheader("This is an app for detecting toxicity in tweets written in portuguese. "
           "Write the name of the user (without @) and select the number of tweets you want to check.")
 
@@ -27,8 +27,7 @@ st.subheader("This is an app for detecting toxicity in tweets written in portugu
 # User information
 with st.form(key='forms'):
     st.markdown(
-        """Insert the **twitter user** (sem o @) to receive a toxicity analysis of the last tweets. 
-        \n#### Result are classified in:
+        """#### Tweets are classified in:
 - 0: Harmless
 - 1: Toxic
         """)
@@ -39,8 +38,11 @@ with st.form(key='forms'):
     submit_button = st.form_submit_button(label='Analyze')
 
 if submit_button:
+
     scraper = TwitterUserScraper(username)
     tweets = get_tweets(scraper, number_of_tweets)
     predictions = get_predictions(tweets, pipe)
-
+    
+    
     st.table(pd.DataFrame({'tweet': tweets, 'toxic':predictions}))
+    
